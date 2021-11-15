@@ -6,7 +6,7 @@ This Terraform 101 Fundamentals Repository contains the necessary basics to unde
 The following files are created within this demonstration: 
 1. main.tf
     1. The Main.tf file contains the main set of configurations for your infrastructure management
-    2. The term “main” simply identifies the primary file for configuration management and the actual .tf file can be named whatever else might suite the situation
+    2. The term “main” simply identifies the primary file for configuration management and the actual .tf file can be named whatever else might suit the situation
 2. variables.tf
     1. The Variables.tf file is used to contain the variable definitions for your infrastructure management
     2. Variables contained within the Variables.tf file are used to abstract values directly from a Main.tf file to remove redundancy and duplicated values
