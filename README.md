@@ -14,3 +14,24 @@ The following files are created within this demonstration:
     1. The Terraform.tfvars file is used to define values established in the Variables.tf file
     2. Configuration files (Main.tf and Variables.tf) can be provided different information with each terraform.tfvars file identified
     3. Terraform.tfvars files allow organizations to use the same configuration files, but change values
+
+# Deployment Instructions
+1. Once the prerequisites are completed, open the code editor and PowerShell
+    1. Clone the repository locally using PowerShell and GIT “```git clone https://github.com/centricconsulting/Terraform101.git```"
+2. Within the code editor, open the cloned folder
+3. Open the following files: 
+    1. **Main.tf**
+    2. **Variables.tf**
+    3. **Terraform.tfvars**
+4. Review Terraform and AzureRM provider configurations and backend configurations:
+    1. Determine if a remote storage location will be used for the deployment or if local storage is sufficient
+5. Using the Azure CLI, authenticate to the Azure Subscription:
+    1. ```az login```
+    2. ```az account set --subscription “<enter subscription name>”```
+    3. ```az account show: Shows the current set account``` 
+6. Adjust the “terraform.tfvars” and main.tf file with the correct information
+7. Run the terraform commands in sequence:
+    1. ```terraform init``` 
+    2. ```terraform plan --var-file=“terraform.tfvars”```
+    3. ```terraform apply --var-file=“terraform.tfvars” -auto-approve```
+The resource Group defined should now be created in the Azure
